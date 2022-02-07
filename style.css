@@ -1,12 +1,16 @@
 /* fonts */
-
+/* font-family: 'Shadows Into Light Two', cursive; */
+/* font-family: 'Montserrat', sans-serif; 300, 400, 900*/
 
 @font-face {
-  font-family: beckett;
-  src: url(/fonts/beckette.ttf);
+  font-family: thesunset;
+  src: url(/fonts/the-sunset.ttf);
 }
 
-/* font-family: 'Montserrat', sans-serif; */
+font-face {
+  font-family: fontania;
+  src: url(/fonts/fontania.otf);
+}
 
 * {
   padding: 0;
@@ -26,8 +30,8 @@ img {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  color: #000000;
+  font-family: 'Noto Sans HK', sans-serif;
+  color: rgb(120,120,125);
 
 }
 
@@ -58,19 +62,20 @@ a {
   text-decoration: none;
   color: inherit;}
 
-a:hover {color: #949c9f;}
+a:hover {color: #ebc8d0;}
 
-p {color: #000000;}
+p {color: rgb(120,120,125);}
 
 h1 {
-  font-family: beckett;
+  font-family:  thesunset;
   font-size: 3rem;
+  font-weight: lighter;
 }
 
 h2 {
-  font-family: beckett;
-  font-size: 3rem;
-  }
+  font-family: fontania, thesunset;
+  font-size: 2rem;
+  font-weight: lighter;}
 
 h4 {
   font-family: 'Montserrat', sans-serif;
@@ -83,17 +88,17 @@ h5 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
-  text-transform: uppercase;}
+  text-transform: lowercase;}
 
 h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 1.1rem;
-  text-transform: uppercase;;}
+  text-transform: lowercase;}
 
 .success a {color: #b4d8eb;}
 .success h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family:  thesunset;
   text-transform: none;}
 
 header h2 {
@@ -105,6 +110,33 @@ header h2 {
     color: rgb(120,120,125);
 }
 
+  header nav .bio:hover {
+    background-image: url('/images/a2.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgb(120,120,125);}
+
+  header nav .music:hover {
+    background-image: url('/images/a2.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgb(120,120,125);}
+
+  header nav .merch:hover {
+    background-image: url('/images/a2.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgb(120,120,125);}
+
+  header nav .connect:hover {
+    background-image: url('/images/a2.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgb(120,120,125);}
 
     /* Hamburger Menu */
     .hamburger,
@@ -118,7 +150,7 @@ header h2 {
       right:0;
       left:0;
       bottom: 0;
-      background-color: rgba(255,255,255,.9);
+      background: linear-gradient(180deg,rgba(255,255,255,.8) 6%,rgb(235,200,208) 100%);
       padding: 16% 10% 10% 10%;
       z-index: 10;
 
@@ -140,19 +172,27 @@ header h2 {
       padding:2%;
       margin: 3%;
       position: fixed;
-      line-height: 0.2;
+      color: rgba(120,120,125,0.6);
+      line-height: 0.3;
 
     }
 
+.paper-bg h2 {margin-top: -5%;}
+/* .paper-bg p {margin-top: 5%;}  */
+
+/* .bg-brown-paper {background-image: url(/images/bg-brown.png);} */
 
 header, padded-top {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Zeyada', cursive;
   text-transform: uppercase;
   font-size: 1.2rem;}
 
 
 header {
-  background-color: #e9e2db;
+  background-image: url('images/torn-paper2-sm.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   position: sticky;
   top:0;
   left:0;
@@ -163,20 +203,10 @@ header {
   text-align: center;
   }
 
-.logo {width: 44%;}
+  footer {background-color: #ebf8ff;}
+  .sub-footer {background-color: transparent;}
 
-  footer
-    {
-    background-color: #2F383B;
-    }
-
-.small-font a
-  {
-  font-size: 0.8rem;
-  color: #FFFFFF;
-  }
-
-.small-font a:hover {color: #949c9f;}
+.small-font {font-size: 0.8rem;}
 
 
   .iconify {
@@ -189,8 +219,30 @@ header {
   .banner {
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-height: 110vh;
+    margin-top: -10%;
     /* background-attachment: fixed; */
+  }
+  .paper-pg {
+    background-color: rgba(226,227,227,1);
+    background-size: cover;
+    background-position:bottom;
+    min-height: 100vh;
+    margin-top: -10%;}
+
+  .paper {
+    background-image: url('images/bg-paper.png');
+    background-color: rgba(226,227,227,1);
+    background-size: cover;
+    background-position:top;
+    min-height: 100vh;
+  }
+
+  .music-pg {
+    background-color: #f1f1f1;
+    background-size: cover;
+    background-position:bottom;
+    margin-top: -10%;
   }
 
   .banner-merch{
@@ -201,34 +253,18 @@ header {
 
 
   .polaroids1
-  {  border-top: 2px solid white ;
-    border-right: 2px solid white ;
-    border-bottom: 2px solid white ;}
-
+  {transform: rotate(-7deg);
+  z-index: -2;}
   .polaroids2
-  {
-  border-top: 2px solid white ;
-  border-right: 2px solid white ;
-  border-bottom: 2px solid white ;}
-
-  .polaroids3
-  {
-  border-top: 2px solid white ;
-  border-right: 2px solid white ;
-  border-bottom: 2px solid white ;}
-
+  {transform: rotate(7deg);
+    z-index: -2;}
+  .polaroids3{}
   .polaroids4
-  {
-  border-top: 2px solid white ;
-  border-right: 2px solid white ;
-  border-bottom: 2px solid white ;
-  }
+  {transform: rotate(7deg);
+    z-index: -2;}
   .polaroids5
-  {
-  border-top: 2px solid white ;
-  border-right: 2px solid white ;
-  border-bottom: 2px solid white ;
-  }
+  {transform: rotate(-7deg);
+    z-index: -2;}
 
   .cd {
     padding-top: 4%;
@@ -241,6 +277,12 @@ header {
    background-position: center;
   }
 
+  .newsletter h4 {
+    font-family: 'Zeyada', cursive;
+    transform: rotate(-7deg);
+    font-size: 3rem;
+  }
+
  .bg-image-mob-banner {
    background-size: contain;
    background-position: center;
@@ -249,22 +291,26 @@ header {
 
  .light-bg {background-color: white;}
 
+ .cover img {transform: rotate(358deg);}
+
  .button {
-   border: solid 0.5px #2F383B;
+   font-family: 'Zeyada', cursive;
+   border: solid 0.5px black;
    text-decoration: none;
-   color: #d6dadd;
+   color: black;
    padding: 0.6rem 2rem;
    margin-top: 1rem;
    display: inline-block;
    text-transform: uppercase;
    font-size: 0.9rem;
    font-weight: 500;
-   background-color: #2F383B;}
+   border-radius: 50px;
+   background-color: #ebc8d0;}
 
    .button:hover {
-     background-color: #d6dadd;
-    transition: all 0.5s;
-    color:  #2F383B;}
+     background-color: #b4d8eb;
+    transition: all 1s;
+    color: black;}
 
     .card {
       padding: 2rem;
@@ -388,16 +434,32 @@ header {
       display: block;
   }
 
+
+  .button-solid {
+      background-color: #ebc8d0;
+      color: #fff;
+      border: 1px solid #ebc8d0;
+      padding: .8rem 2rem .6rem;
+  }
+
+  .button-solid:focus {
+    background-color: #b4d8eb;
+    color: white;
+    border: 1px solid #b4d8eb;}
+
+    .button-solid:hover {
+      background-color: #b4d8eb;
+      color: white;
+      border: 1px solid #b4d8eb;}
+
   element.style {display: none;
   }
 
   .enquiry input {
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;}
+      font-family: 'Montserrat', sans-serif;}
 
     input,
     textarea {
-      text-transform: uppercase;
       border-style: solid;
       border: 2px solid rgb(200, 200, 205);
       padding: 0.8em;
@@ -406,9 +468,8 @@ header {
       font-size: 1rem;
       vertical-align: top;
     }
-
     .input-text:focus {
-    border-color:  #e9e2db;}
+    border-color:  #ebc8d0;}
 
     input:focus, textarea:focus {
       outline: 0;
@@ -417,6 +478,7 @@ header {
     /* merch   */
 
     .back-button {
+    font-family: 'Zeyada', cursive;
     color: #787882;
     padding: .5rem;
     letter-spacing: 1px;
@@ -448,14 +510,9 @@ header {
       padding: 0%;
       }
 
-  header h2 {font-size: 1rem;}
-
-  .logo {
-    width: 100%;}
+    header h2 {font-size: 1rem;}
 
     h4 {font-size: 1.3rem;}
-
-.cd h5, h4 {font-size: 1rem;}
 
 
     .mob-hide {
@@ -468,15 +525,17 @@ header {
       right: 15px;
     }
 
-  .active {color: #949c9f;}
+  .active {color: #b4d8eb;
+
+    }
 
   .iconify {font-size: 2rem;}
   .banner {
     background-image: url('/images/banner-mob.jpg');
-    min-height: 100vh;
+    min-height: 130vh;
     margin-top: 0%;}
 
-  .music-pg {padding-top: 20%;}
+  .music-pg {margin-top: 0%;}
 
   .sm-bold {
     font-size: 2rem;}
@@ -492,9 +551,24 @@ header {
   @media(max-width:425px) {
     .banner {
       background-image: url('/images/banner-mob.jpg');
-      min-height: 100vh;
+      min-height: 50vh;
   }
 
+
+  .polaroids1
+  {transform: rotate(-2deg);
+    z-index: -2;}
+
+  .polaroids2
+  {transform: rotate(2deg);
+    z-index: -2;}
+  .polaroids3{}
+  .polaroids4
+  {transform: rotate(2deg);
+    z-index: -2;}
+  .polaroids5
+  {transform: rotate(-2deg);
+    z-index: -2;}
 
   .banner-merch {
     background-image: url(/images/cover.jpg);
@@ -509,9 +583,6 @@ header {
 h1 {font-size: 2rem;}
 
 h4 {font-size: 1.3rem;}
-
-.cd h5, h4 {font-size: 1rem;}
-
 .blog-masonry {
 columns: 1;
 column-gap: 0;}
